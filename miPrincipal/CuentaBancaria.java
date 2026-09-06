@@ -18,11 +18,14 @@ public class CuentaBancaria {
     }
 
     public void depositar(double cantidad) {
+        if (cantidad <= 0) {
+            return;
+        }
         saldo += cantidad;
     }
 
     public boolean retirar(double cantidad) {
-        if (cantidad > saldo) {
+        if (cantidad <= 0 || cantidad > saldo) {
             return false;
         }
         saldo -= cantidad;
