@@ -1,24 +1,34 @@
-# Proyecto - Java con Pruebas para Autograding
-Este es un cambio
+# Proyecto - Introducción a las pruebas automatizadas con Classroom50
 
-Plantilla básica para proyecto de Java con Autograding
+## Propósito
+Familiarizar al estudiante con el entorno de trabajo de Classroom50 y con el uso de pruebas automatizadas para verificar el comportamiento de un programa. Mediante la implementación de una clase sencilla, el estudiante observará cómo una prueba compara los resultados esperados con los resultados obtenidos, identificará errores en su código y realizará las correcciones necesarias hasta lograr que las pruebas sean exitosas.
 
 ## Diagrama de clases
 [Editor en línea](https://mermaid.live/)
 ```mermaid
 ---
-title: Clase
+title: ConversorTemperatua
 ---
 classDiagram
-      class Clase
-      Clase: -x
-      Clase: -y
-      Clase: +op1()
-      Clase: +op2()
-      Clase: +op3()
-      Clase: +op4()
+    class ConversorTemperatura {
+        -double celsius
+        +ConversorTemperatura(double celsius)
+        +double getCelsius()
+        +double aFahrenheit()
+        +double aKelvin()
+    }
 ```
 [Referencia-Mermaid](https://mermaid.js.org/syntax/classDiagram.html)
+
+## Conversión de temperaturas
+La clase recibe una temperatura en grados Celsius y calcula las demás escalas a partir de ese valor.
+
+- **Celsius a Fahrenheit:** se multiplica Celsius por 9, se divide entre 5 y se suman 32.
+    `Fahrenheit = (Celsius * 9 / 5) + 32`
+- **Celsius a Kelvin:** se suman 273.15 a los grados Celsius.
+    `Kelvin = Celsius + 273.15`
+
+Por ejemplo, 25 °C equivalen a 77 °F y 298.15 K.
 
 ## Diagrama de clases UML con draw.io
 El repositorio está configurado para crear Diagramas de clases UML con ```draw.io```. Para usarlo simplemente agrega un archivo con extensión ```.drawio.png```, das doble clic sobre el mismo y se activará el editor ```draw.io``` incrustado en ```VSCode``` para edición. Asegúrate de agregar las formas UML en el menú de formas del lado izquierdo (opción ```+Más formas```).

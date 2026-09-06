@@ -1,11 +1,11 @@
 package miPrincipal;
 
 public class Principal {
-    public String getGreeting() {
-        return "Hello World!";
-    }
-
     public static void main(String[] args) {
-        System.out.println(new Principal().getGreeting());
+        ConversorTemperatura conversor = new ConversorTemperatura(25);
+
+        System.out.println("Celsius: " + conversor.getCelsius());
+        System.out.println("Fahrenheit: " + conversor.aFahrenheit());
+        System.out.println("Kelvin: " + conversor.aKelvin());
     }
 }
