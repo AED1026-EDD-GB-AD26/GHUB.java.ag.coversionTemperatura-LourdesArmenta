@@ -27,6 +27,13 @@ class CuentaBancariaTest {
     }
 
     @Test
+    void depositarConCantidadNoPositivaNoModificaElSaldo() {
+        CuentaBancaria cuenta = new CuentaBancaria("Ana", 1000);
+        cuenta.depositar(-500);
+        assertEquals(1000, cuenta.getSaldo());
+    }
+
+    @Test
     void retirarConSaldoSuficienteActualizaSaldoYRegresaTrue() {
         CuentaBancaria cuenta = new CuentaBancaria("Ana", 1500);
         boolean resultado = cuenta.retirar(500);
