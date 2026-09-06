@@ -1,2 +1,4 @@
 ./miPrincipal/Principal.java
+./miPrincipal/CuentaBancaria.java
+./miTest/CuentaBancariaTest.java
 ./miTest/AppTest.java
