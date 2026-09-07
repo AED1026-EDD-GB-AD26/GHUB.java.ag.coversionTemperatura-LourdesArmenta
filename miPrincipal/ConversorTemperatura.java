@@ -4,18 +4,18 @@ public class ConversorTemperatura {
     private double celsius;
 
     public ConversorTemperatura(double celsius) {
-        this.celsius = celsius;
+        
     }
 
     public double getCelsius() {
-        return celsius;
+        return 0;
     }
 
     public double aFahrenheit() {
-        return (celsius * 9 / 5) + 32;
+        return 0;
     }
 
     public double aKelvin() {
-        return celsius + 273.15;
+        return 0;
     }
 }
